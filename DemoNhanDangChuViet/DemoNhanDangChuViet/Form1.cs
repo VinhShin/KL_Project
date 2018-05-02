@@ -18,6 +18,13 @@ namespace DemoNhanDangChuViet
     public partial class Form1 : Form
     {
         List<SinhVien> lst = new List<SinhVien>();
+        Image image;
+        string path = "";
+        public Image Image
+        {
+            get { return image; }
+            set { image = value; }
+        }
         string line;
         public Form1()
         {
@@ -26,13 +33,21 @@ namespace DemoNhanDangChuViet
         OpenFileDialog ofd = new OpenFileDialog();
         private void btInputImage_Click(object sender, EventArgs e)
         {
+           
+            
             ofd.Title = "Open Image";
             ofd.InitialDirectory = @"D:\";
             ofd.Filter = "Image |*.png";
+            
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                pictureBox1.Image = Image.FromFile(ofd.FileName);
+//                image = Image.FromFile(ofd.FileName);
+                path = ofd.FileName;
+                //pictureBox1.Image = Image.FromFile(ofd.FileName);
             }
+            fShowImage f = new fShowImage(path);
+            f.setPath(path);
+            f.Show();
         }
         
 
@@ -110,7 +125,7 @@ namespace DemoNhanDangChuViet
             {
                 img_xam_t2.Draw(LineSegment2D[0][i], new Gray(255), 2);
             }
-           
+
             using (MemStorage storage = new MemStorage())
                 for (Contour<Point> contours = img_xam_t2.FindContours(Emgu.CV.CvEnum.CHAIN_APPROX_METHOD.CV_LINK_RUNS, Emgu.CV.CvEnum.RETR_TYPE.CV_RETR_EXTERNAL, storage); contours != null; contours = contours.HNext)
                 {
@@ -152,7 +167,7 @@ namespace DemoNhanDangChuViet
             Process proc = null;
             try
             {
-                string targetDir = string.Format(@"D:\KhoaLuan\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\Python_Master");   //this is where mybatch.bat lies
+                string targetDir = string.Format(@"D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\Python_Master");   //this is where mybatch.bat lies
                 proc = new Process();
                 proc.StartInfo.WorkingDirectory = targetDir;
                 proc.StartInfo.FileName = "make_contours.bat";
@@ -161,8 +176,12 @@ namespace DemoNhanDangChuViet
                 proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;  //this is for hiding the cmd window...so execution will happen in back ground.
                 proc.Start();
                 proc.WaitForExit();
-                Bitmap bmp = new Bitmap(@"D:\KhoaLuan\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\Python_Master\bangdiem_contours.png");
-                pictureBox2.Image = bmp;
+                Bitmap bmp = new Bitmap(@"D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\Python_Master\bangdiem_contours.png");
+                //pictureBox2.Image = bmp;
+                path = @"D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\Python_Master\bangdiem_contours.png";
+                fShowImage f = new fShowImage(path);
+                f.setPath(path);
+                f.Show();
             }
             catch (Exception ex)
             {
@@ -176,6 +195,65 @@ namespace DemoNhanDangChuViet
             Process process;
 
             ProcessInfo = new ProcessStartInfo(Application.StartupPath + "\\Python_Master\\make_contours.bat", command);
+            ProcessInfo.CreateNoWindow = true;
+            ProcessInfo.UseShellExecute = false;
+            ProcessInfo.WorkingDirectory = Application.StartupPath + "\\Python_Master";
+            // *** Redirect the output ***
+            ProcessInfo.RedirectStandardError = true;
+            ProcessInfo.RedirectStandardOutput = true;
+
+            process = Process.Start(ProcessInfo);
+            process.WaitForExit();
+
+            // *** Read the streams ***
+            string output = process.StandardOutput.ReadToEnd();
+            string error = process.StandardError.ReadToEnd();
+
+            ExitCode = process.ExitCode;
+
+            MessageBox.Show("output>>" + (String.IsNullOrEmpty(output) ? "(none)" : output));
+            MessageBox.Show("error>>" + (String.IsNullOrEmpty(error) ? "(none)" : error));
+            MessageBox.Show("ExitCode: " + ExitCode.ToString(), "ExecuteCommand");
+            process.Close();
+        }
+
+        private void btReshape_Click(object sender, EventArgs e)
+        {
+            ExecuteBatFile1();
+        }
+        private void ExecuteBatFile1()
+        {
+            Process proc = null;
+            try
+            {
+                string targetDir = string.Format(@"D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\Python_Master");   //this is where mybatch.bat lies
+                proc = new Process();
+                proc.StartInfo.WorkingDirectory = targetDir;
+                proc.StartInfo.FileName = "make_reshape.bat";
+                // proc.StartInfo.Arguments = string.Format("10");  //this is argument
+                proc.StartInfo.CreateNoWindow = false;
+                proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;  //this is for hiding the cmd window...so execution will happen in back ground.
+                proc.Start();
+                proc.WaitForExit();
+                Bitmap bmp = new Bitmap(@"D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\Python_Master\bangdiem_reshape.png");
+                //pictureBox2.Image = bmp;
+                path = @"D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\Python_Master\bangdiem_reshape.png";
+                fShowImage f = new fShowImage(path);
+                f.setPath(path);
+                f.Show();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception Occurred :{0},{1}", ex.Message, ex.StackTrace.ToString());
+            }
+        }
+        public void ExecuteCommand1(string command)
+        {
+            int ExitCode;
+            ProcessStartInfo ProcessInfo;
+            Process process;
+
+            ProcessInfo = new ProcessStartInfo(Application.StartupPath + "\\Python_Master\\make_reshape.bat", command);
             ProcessInfo.CreateNoWindow = true;
             ProcessInfo.UseShellExecute = false;
             ProcessInfo.WorkingDirectory = Application.StartupPath + "\\Python_Master";
