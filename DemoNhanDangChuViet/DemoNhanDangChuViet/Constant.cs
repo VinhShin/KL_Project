@@ -8,6 +8,6 @@ namespace DemoNhanDangChuViet
 {
     public class Constant
     {
-        static string pathImage = "";
+       public static string pathImage = "";
     }
 }

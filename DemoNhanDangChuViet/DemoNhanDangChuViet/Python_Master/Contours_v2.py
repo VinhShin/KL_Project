@@ -1,7 +1,7 @@
 ﻿
 import numpy as np
 import cv2
-
+import time
 
 def show_wait_destroy(winname, img):
     cv2.imshow(winname, img)
@@ -10,8 +10,8 @@ def show_wait_destroy(winname, img):
     cv2.destroyWindow(winname)
 
 
-img = cv2.imread('bangdiem_morph_line.png')
-imgOrigan = cv2.imread('bangdiem_reshape.png');
+img = cv2.imread('bangdiem_morph_line1.png')
+imgOrigan = cv2.imread('bangdiem_reshape1.png');
 #tang do day
 kernel = np.ones((2,2),np.uint8)
 erosion = cv2.erode(img,kernel,iterations = 1)
@@ -56,7 +56,6 @@ list_mssv = [];
 #cai nay de choi - bật lên để hiện thị.
 #img = imgOrigan;
 for cnt in contours:
-    print i;
 #    img = cv2.drawContours(img, [cnt], 0, (0,255,0),3)
     x, y, width, height = cv2.boundingRect(cnt)
     #add vào list điểm chữ
@@ -64,18 +63,15 @@ for cnt in contours:
     if(x < ps_dc and x+width > ps_dc):
         img = cv2.drawContours(img, [cnt], 0, (0,255,0), 3)
         list_dc.append(i);
-        print "day la o diem chu" + str(index)
-   
+        print "day la o diem chu" + str(index)   
     #add vào list điểm số
     elif(x < ps_ds and x+width > ps_ds):
         img = cv2.drawContours(img, [cnt], 0, (255,0,0), 3)
         list_ds.append(i);
-        print "day la o diem so" + str(index)
     #add vào list mssv
     elif(x < ps_mssv and x+width > ps_mssv):
         img = cv2.drawContours(img, [cnt], 0, (0,0,255), 3)
         list_mssv.append(i);
-        print "day la o mssv" + str(index)
     #------------cat hinh-------------
     #roi = imgOrigan[y+2:y+height, x+5:x+width]
     #http://answers.opencv.org/question/29260/how-to-save-a-rectangular-roi/
@@ -87,13 +83,16 @@ for cnt in contours:
 cv2.imwrite('bangdiem_contours.png',img)
 print list_dc
 #cat diem chu
-
+i = 75
 for item in list_dc:
     x, y, width, height = cv2.boundingRect(contours[item])
     roi = imgOrigan[y:y+height, x:x+width]
-    cv2.imwrite("./catchu/dc/"+str(item)+".png", roi)
+    cv2.imwrite("./catchu/dc/"+str(i)+".png", roi)
+    i += 1
     #nguon: http://answers.opencv.org/question/29260/how-to-save-a-rectangular-roi/
 #cat diem so
+print i
+'''
 for item in list_ds:
     x, y, width, height = cv2.boundingRect(contours[item])
     roi = imgOrigan[y:y+height, x:x+width]
@@ -105,7 +104,7 @@ for item in list_mssv:
     roi = imgOrigan[y:y+height, x:x+width]
     cv2.imwrite("./catchu/mssv/"+str(item)+".png", roi)
     #nguon: http://answers.opencv.org/question/29260/how-to-save-a-rectangular-roi/
-
+'''
 #img = cv2.drawContours(img, [cnt], 0, (0,255,0), 3)
 #show_wait_destroy("ohyeh",img)
 #cells = [np.hsplit(row,100) for row in np.vsplit(img, 50)]

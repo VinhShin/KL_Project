@@ -33,8 +33,6 @@ namespace DemoNhanDangChuViet
         OpenFileDialog ofd = new OpenFileDialog();
         private void btInputImage_Click(object sender, EventArgs e)
         {
-           
-            
             ofd.Title = "Open Image";
             ofd.InitialDirectory = @"D:\";
             ofd.Filter = "Image |*.png";
@@ -45,6 +43,7 @@ namespace DemoNhanDangChuViet
                 path = ofd.FileName;
                 //pictureBox1.Image = Image.FromFile(ofd.FileName);
             }
+            Constant.pathImage = path;
             fShowImage f = new fShowImage(path);
             f.setPath(path);
             f.Show();
@@ -226,6 +225,8 @@ namespace DemoNhanDangChuViet
             Process proc = null;
             try
             {
+                string ss =                System.IO.Directory.GetCurrentDirectory();
+                //"D:\\KhoaLuan\\New folder (2)\\KL_Project\\DemoNhanDangChuViet\\DemoNhanDangChuViet\\bin\\Debug"
                 string targetDir = string.Format(@"D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\Python_Master");   //this is where mybatch.bat lies
                 proc = new Process();
                 proc.StartInfo.WorkingDirectory = targetDir;

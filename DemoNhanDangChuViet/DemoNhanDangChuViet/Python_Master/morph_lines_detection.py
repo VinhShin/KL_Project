@@ -8,11 +8,11 @@ import cv2 as cv
 
 
 def show_wait_destroy(winname, img):
-    cv.imshow(winname, img)
-    cv.moveWindow(winname, 500, 0)
-    cv.waitKey(0)
-    cv.destroyWindow(winname)
-
+    #cv.imshow(winname, img)
+    #cv.moveWindow(winname, 500, 0)
+    #cv.waitKey(0)
+    #cv.destroyWindow(winname)
+    print "1"
 
 def main(argv):
     # [load_image]
@@ -24,6 +24,7 @@ def main(argv):
         return -1
     '''
     # Load the image
+
     src = cv.imread("bangdiem_reshape.png", cv.IMREAD_COLOR)
 
     # Check if image is loaded fine
@@ -32,7 +33,6 @@ def main(argv):
         return -1
 
     # Show source image
-    cv.imshow("src", src)
     # [load_image]
 
     # [gray]

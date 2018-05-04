@@ -7,8 +7,8 @@ import cv2
 clf = joblib.load('./model/digits_clf.pkl')
 print '=> Clasificatorul a fost incarcat'
 
-#im = cv2.imread('./image/digit-reco.jpg')
-im = cv2.imread('./image/37.png')
+im = cv2.imread('./image/111.jpg')
+#im = cv2.imread('./image/37.png')
 #shin add
 
 height = im.shape[0]

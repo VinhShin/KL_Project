@@ -6,12 +6,12 @@ import imutils
 import cv2
 
 
-image = cv2.imread("bangdiem4.png")
-imageOrigan = cv2.imread("bangdiem4.png")
+image = cv2.imread("./bangdiem/bangdiem1.png")
+imageOrigan = cv2.imread("./bangdiem/bangdiem1.png")
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 blurred = cv2.GaussianBlur(gray, (5, 5), 0)
-edged = cv2.Canny(blurred, 75, 200)
+edged = cv2.Canny(blurred, 50, 200)
 
 #cv2.imshow("test",edged)
 #cv2.waitKey(0)
@@ -21,6 +21,7 @@ edged = cv2.Canny(blurred, 75, 200)
 cnts = cv2.findContours(edged.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 cnts = cnts[0] if imutils.is_cv2() else cnts[1]
 docCnt = None
+
 if len(cnts) > 0:
  # săp xếp các contour tìm được
  # theo thứ tự lớn tới bé
@@ -34,14 +35,14 @@ if len(cnts) > 0:
   # thì nó chính là 4 góc của bài trắc nghiệm
   if len(approx) == 4:
       docCnt = approx
-      image = cv2.drawContours(image, [docCnt], 0, (0,255,0), 3)      
-      break
+      image = cv2.drawContours(image, [docCnt], 0, (0,255,0), 3)
+      #break
 #paper = four_point_transform(image, docCnt.reshape(4, 2))
 warped = four_point_transform(imageOrigan, docCnt.reshape(4, 2))
-
+'''
 cv2.imshow("test",image)
 cv2.waitKey(0)
 cv2.imshow("test",gray)
 cv2.waitKey(0)
-
+'''
 cv2.imwrite("bangdiem_reshape.png",warped);
