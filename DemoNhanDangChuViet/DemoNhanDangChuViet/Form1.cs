@@ -20,6 +20,7 @@ namespace DemoNhanDangChuViet
         List<SinhVien> lst = new List<SinhVien>();
         Image image;
         string path = "";
+        static Bitmap bmp = null;
         public Image Image
         {
             get { return image; }
@@ -33,8 +34,9 @@ namespace DemoNhanDangChuViet
         OpenFileDialog ofd = new OpenFileDialog();
         private void btInputImage_Click(object sender, EventArgs e)
         {
+            removeBitMap();
             ofd.Title = "Open Image";
-            ofd.InitialDirectory = @"D:\";
+            ofd.InitialDirectory = @""+Constant.currentPath+"";
             ofd.Filter = "Image |*.png";
             
             if (ofd.ShowDialog() == DialogResult.OK)
@@ -44,17 +46,37 @@ namespace DemoNhanDangChuViet
                 //pictureBox1.Image = Image.FromFile(ofd.FileName);
             }
             Constant.pathImage = path;
-            fShowImage f = new fShowImage(path);
-            f.setPath(path);
-            f.Show();
+            string[] name = Constant.pathImage.Split('\\');
+            string[] bangdiem = name[name.Length - 1].Split('.');
+
+            Constant.bangdiem = bangdiem[0];
+
+            //fShowImage f = new fShowImage(path);
+            Bitmap bmp=null;
+            try
+            {
+                bmp = new Bitmap(@"" + path + "");
+            }
+            catch (Exception ed) { 
+            }
+            pictureBox1.Image = bmp;
+            //f.setPath(path);
+            //f.Show();
         }
-        
+        private void removeBitMap()
+        {
+           if (bmp != null)
+               bmp.Dispose();
+             
+        }
 
         private void btRead_Click(object sender, EventArgs e)
         {
-           
+
+            richTextBox1.Text = "";
+            lst.Clear();
             SinhVien[] arr= new SinhVien[100];
-            System.IO.StreamReader file = new System.IO.StreamReader("bangdiem.txt");
+            System.IO.StreamReader file = new System.IO.StreamReader(Constant.currentPath+"//Output.txt");
             while ((line = file.ReadLine()) != null)
             {
                 string[] words = line.Split('\t');
@@ -67,41 +89,47 @@ namespace DemoNhanDangChuViet
             {
                 richTextBox1.Text += lst[i].Maso + "\t" + lst[i].Diemso + "\t" + lst[i].Diemchu + "\n";
             }
+           
         }
 
         private void btImportExcel_Click(object sender, EventArgs e)
         {
             int j = 1;
-                SaveFileDialog fsave = new SaveFileDialog();
+            SaveFileDialog fsave = new SaveFileDialog();
           
-                Microsoft.Office.Interop.Excel.Application app = new Microsoft.Office.Interop.Excel.Application();
-                Microsoft.Office.Interop.Excel.Workbook wb = app.Workbooks.Add(Type.Missing);
-                Microsoft.Office.Interop.Excel._Worksheet sheet = null;
-                try
-                {
+            Microsoft.Office.Interop.Excel.Application app = new Microsoft.Office.Interop.Excel.Application();
+//            Microsoft.Office.Interop.Excel.Workbook wb = app.Workbooks.Add(Type.Missing);
+            Microsoft.Office.Interop.Excel.Workbook wb = app.Workbooks.Open(Constant.currentPath + "//BangDiem.xlsx");
+            Microsoft.Office.Interop.Excel._Worksheet sheet = null;
+            try
+            {
                     
-                    sheet = wb.ActiveSheet;
-                    sheet.Name = "Dữ liệu xuất ra";
-                    sheet.Cells[1, 1].Value = "BẢNG ĐIỂM";
-                    for (int i = 0; i < lst.Count; i++)
-                    {
+                sheet = wb.ActiveSheet;
+                sheet.Name = Constant.bangdiem;
+                wb.Worksheets.Add(sheet);
+                //                sheet.Name = "Dữ liệu xuất ra";
+                sheet.Cells[1, 1].Value = "BẢNG ĐIỂM";
+                for (int i = 0; i < lst.Count; i++)
+                {
                       
-                            sheet.Cells[j + 1, 1].Value = lst[i].Maso;
-                            sheet.Cells[j + 1, 2].Value = lst[i].Diemso;
-                            sheet.Cells[j + 1, 3].Value = lst[i].Diemchu;
-                            j++;
-                    }
+                        sheet.Cells[j + 1, 1].Value = lst[i].Maso;
+                        sheet.Cells[j + 1, 2].Value = lst[i].Diemso;
+                        sheet.Cells[j + 1, 3].Value = lst[i].Diemchu;
+                        j++;
+                }
                 
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                finally
-                {
-                    app.Quit();
-                    wb = null;
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            finally
+            {
+                wb.Save();
+                wb.Close(true);
+                app.Quit();
+                wb = null;
+            }
            
         }
         Bitmap find_contour(Image<Bgr, Byte> img_mau, Image<Gray, Byte> img_xam)
@@ -166,21 +194,24 @@ namespace DemoNhanDangChuViet
             Process proc = null;
             try
             {
-                string targetDir = string.Format(@"D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\Python_Master");   //this is where mybatch.bat lies
+                pictureBox2.Image = null;
+                string targetDir = string.Format(Constant.currentPath);   //this is where mybatch.bat lies
+
                 proc = new Process();
                 proc.StartInfo.WorkingDirectory = targetDir;
                 proc.StartInfo.FileName = "make_contours.bat";
-               // proc.StartInfo.Arguments = string.Format("10");  //this is argument
+                proc.StartInfo.Arguments = @"" + Constant.pathImage + "";
                 proc.StartInfo.CreateNoWindow = false;
-                proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;  //this is for hiding the cmd window...so execution will happen in back ground.
+      //          proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;  //this is for hiding the cmd window...so execution will happen in back ground.
                 proc.Start();
                 proc.WaitForExit();
-                Bitmap bmp = new Bitmap(@"D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\Python_Master\bangdiem_contours.png");
-                //pictureBox2.Image = bmp;
-                path = @"D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\Python_Master\bangdiem_contours.png";
-                fShowImage f = new fShowImage(path);
-                f.setPath(path);
-                f.Show();
+                bmp = new Bitmap(@"" + Constant.currentPath + "\\bangdiem_contours.png");
+                pictureBox2.Image = bmp;
+                //                path = @"..\..\DemoNhanDangChuViet\Python_Master\bangdiem_reshape.png";
+                ////                path = @"D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\Python_Master\bangdiem_reshape.png";
+                //                fShowImage f = new fShowImage(path);
+                //                f.setPath(path);
+                //                f.Show();
             }
             catch (Exception ex)
             {
@@ -225,23 +256,22 @@ namespace DemoNhanDangChuViet
             Process proc = null;
             try
             {
-                string ss =                System.IO.Directory.GetCurrentDirectory();
-                //"D:\\KhoaLuan\\New folder (2)\\KL_Project\\DemoNhanDangChuViet\\DemoNhanDangChuViet\\bin\\Debug"
-                string targetDir = string.Format(@"D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\Python_Master");   //this is where mybatch.bat lies
+                pictureBox2.Image = null;
+
+     
+                string targetDir = string.Format(Constant.currentPath);   //this is where mybatch.bat lies
+                
                 proc = new Process();
                 proc.StartInfo.WorkingDirectory = targetDir;
                 proc.StartInfo.FileName = "make_reshape.bat";
-                // proc.StartInfo.Arguments = string.Format("10");  //this is argument
+                proc.StartInfo.Arguments=@""+Constant.pathImage+"";
                 proc.StartInfo.CreateNoWindow = false;
-                proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;  //this is for hiding the cmd window...so execution will happen in back ground.
+              //  proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;  //this is for hiding the cmd window...so execution will happen in back ground.
                 proc.Start();
                 proc.WaitForExit();
-                Bitmap bmp = new Bitmap(@"D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\Python_Master\bangdiem_reshape.png");
-                //pictureBox2.Image = bmp;
-                path = @"D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\Python_Master\bangdiem_reshape.png";
-                fShowImage f = new fShowImage(path);
-                f.setPath(path);
-                f.Show();
+                bmp = new Bitmap(@"" + Constant.currentPath + "\\bangdiem_reshape.png");
+                pictureBox2.Image = bmp;
+
             }
             catch (Exception ex)
             {
@@ -275,6 +305,14 @@ namespace DemoNhanDangChuViet
             MessageBox.Show("error>>" + (String.IsNullOrEmpty(error) ? "(none)" : error));
             MessageBox.Show("ExitCode: " + ExitCode.ToString(), "ExecuteCommand");
             process.Close();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+                Constant.currentPath = System.IO.Directory.GetCurrentDirectory();
+                Constant.currentPath = System.IO.Directory.GetParent(Constant.currentPath).FullName;
+                Constant.currentPath = System.IO.Directory.GetParent(Constant.currentPath).FullName;
+                Constant.currentPath += "\\Python_Master";
         }
     }
 }

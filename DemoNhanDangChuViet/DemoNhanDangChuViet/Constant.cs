@@ -9,5 +9,7 @@ namespace DemoNhanDangChuViet
     public class Constant
     {
        public static string pathImage = "";
+       public static string currentPath = "";
+       public static string bangdiem = "";
     }
 }

@@ -4,10 +4,14 @@ import numpy as np
 import argparse
 import imutils
 import cv2
+import sys
 
+#image = cv2.imread("./bangdiem/bangdiem1.png")
+#imageOrigan = cv2.imread("./bangdiem/bangdiem1.png")
+print sys.argv
+image = cv2.imread(sys.argv[1])
+imageOrigan = cv2.imread(sys.argv[1])
 
-image = cv2.imread("./bangdiem/bangdiem1.png")
-imageOrigan = cv2.imread("./bangdiem/bangdiem1.png")
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 blurred = cv2.GaussianBlur(gray, (5, 5), 0)

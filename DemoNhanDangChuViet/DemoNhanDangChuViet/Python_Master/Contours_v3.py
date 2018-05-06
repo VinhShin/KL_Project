@@ -36,15 +36,7 @@ diemchu_col = contours[2]# cot diem chu
 diemso_col = contours[3]
 massv_col = contours[7]
 #lay vi tri
-'''
-x, y, width, height = cv2.boundingRect(diemchu_col)
-ps_dc = x + (width/2) # vi tri x nay la cua diem chu
-print ps_dc
-x, y, width, height = cv2.boundingRect(diemso_col)
-ps_ds =  x + (width/2)
-x, y, width, height = cv2.boundingRect(massv_col)
-ps_mssv = x + (width/2)
-'''
+
 
 width = img.shape[1]
 ps_mssv = width*0.111
@@ -62,6 +54,7 @@ check = 0# dung de kiem tra xem mssv, dc, ds co cung 1 hang ko
 checkChange = -1 # dung de kiem tra check co bi thay doi ko
 tempDiem = Diem("null","null","null",-1,-1,-1)
 ListDiem = []
+img = imgOrigan.copy()
 for cnt in contours:
 #    img = cv2.drawContours(img, [cnt], 0, (0,255,0),3)
     #print "-_-"
@@ -98,6 +91,7 @@ for cnt in contours:
     #show_wait_destroy("ohyeh",img)
     
 cv2.imwrite('bangdiem_contours.png',img)
+
 #print list_dc
 #cat diem chu
 i = 0
@@ -120,9 +114,17 @@ for diem in ListDiem:
         diem.setDiemChu(diemchu)
         #cv2.imwrite("./catchu/"+str(i)+"c.png", roi)
 text_file = open("Output.txt", "w")
+'''
 for diem in ListDiem:
-    text_file.write(diem.getMssv()+"\n");
-    text_file.write(diem.getDiemSo()+"\n");
-    text_file.write(diem.getDiemChu()+"\n");
+    text_file.write(diem.getMssv()+"\t"+diem.getDiemSo()+"\t"+diem.getDiemChu()+"\n");
+#    text_file.write(diem.getDiemSo()+"\n");
+#    text_file.write(diem.getDiemChu()+"\n");
+text_file.close()
+'''
+for i in range(len(ListDiem)-1,0,-1):
+    diem = ListDiem[i];
+    text_file.write(diem.getMssv()+"\t"+diem.getDiemSo()+"\t"+diem.getDiemChu()+"\n");
+#    text_file.write(diem.getDiemSo()+"\n");
+#    text_file.write(diem.getDiemChu()+"\n");
 text_file.close()
 #np.savetxt('Output.txt', ["Purchase Amount: %s" % TotalAmount], fmt='%s')

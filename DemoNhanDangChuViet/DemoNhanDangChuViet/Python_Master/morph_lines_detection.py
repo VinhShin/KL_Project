@@ -12,7 +12,7 @@ def show_wait_destroy(winname, img):
     #cv.moveWindow(winname, 500, 0)
     #cv.waitKey(0)
     #cv.destroyWindow(winname)
-    print "1"
+    print "........"
 
 def main(argv):
     # [load_image]

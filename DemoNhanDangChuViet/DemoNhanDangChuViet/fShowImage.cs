@@ -33,5 +33,10 @@ namespace DemoNhanDangChuViet
 
         }
 
+        private void fShowImage_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
