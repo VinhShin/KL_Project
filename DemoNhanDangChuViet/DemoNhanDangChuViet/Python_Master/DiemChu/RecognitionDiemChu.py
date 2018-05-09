@@ -35,7 +35,7 @@ def recognition(img):
     
     svm = cv.ml.SVM_load('DiemChu/svm_data.dat')
 #    svm = cv.ml.SVM_load('svm_data.dat')
-    print img.shape
+    #print img.shape
     #cv.imshow("ss",img)
     #cv.waitKey(0)
     

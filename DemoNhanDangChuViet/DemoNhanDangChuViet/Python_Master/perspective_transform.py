@@ -9,6 +9,7 @@ import sys
 #image = cv2.imread("./bangdiem/bangdiem1.png")
 #imageOrigan = cv2.imread("./bangdiem/bangdiem1.png")
 print sys.argv
+print "..............................Tiến hành điều chỉnh biên ảnh..........."
 image = cv2.imread(sys.argv[1])
 imageOrigan = cv2.imread(sys.argv[1])
 

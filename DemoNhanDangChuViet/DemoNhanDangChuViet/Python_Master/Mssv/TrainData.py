@@ -33,23 +33,22 @@ def hog(img):
     return hist
 ## [hog]
 
-img = cv.imread('digits.png',0)
+img = cv.imread('MSSV_Train.png',0)
 if img is None:
     raise Exception("we need the digits.png image from samples/data here !")
 
 
-cells = [np.hsplit(row,100) for row in np.vsplit(img,50)]
+train_cells = [np.hsplit(row,50) for row in np.vsplit(img,40)]
 
 # First half is trainData, remaining is testData
-train_cells = [ i[:50] for i in cells ]
-test_cells = [ i[50:] for i in cells]
+
 
 ######     Now training      ########################
 
 deskewed = [list(map(deskew,row)) for row in train_cells]
 hogdata = [list(map(hog,row)) for row in deskewed]
 trainData = np.float32(hogdata).reshape(-1,64)
-responses = np.repeat(np.arange(10),250)[:,np.newaxis]
+responses = np.repeat(np.arange(10),200)[:,np.newaxis]
 
 svm = cv.ml.SVM_create()
 svm.setKernel(cv.ml.SVM_LINEAR)

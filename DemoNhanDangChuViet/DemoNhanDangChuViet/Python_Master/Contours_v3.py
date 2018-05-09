@@ -15,7 +15,8 @@ def show_wait_destroy(winname, img):
     cv2.waitKey(0)
     cv2.destroyWindow(winname)
 
-
+print "..................Tach Mssv - Diem So - Diem Chu..............."
+print "Du lieu duoc luu tai Python_Master/catchu/"
 img = cv2.imread('bangdiem_morph_line.png')
 imgOrigan = cv2.imread('bangdiem_reshape.png');
 #tang do day
@@ -55,6 +56,7 @@ checkChange = -1 # dung de kiem tra check co bi thay doi ko
 tempDiem = Diem("null","null","null",-1,-1,-1)
 ListDiem = []
 img = imgOrigan.copy()
+
 for cnt in contours:
 #    img = cv2.drawContours(img, [cnt], 0, (0,255,0),3)
     #print "-_-"
@@ -82,49 +84,48 @@ for cnt in contours:
         tempDiem.setMssv(time.time())
         tempDiem.setCntMssv(cnt)
         img = cv2.drawContours(img, [cnt], 0, (0,0,255), 3)
+    i=i+1
+if tempDiem.getMssv() != "null":
+    ListDiem.append(tempDiem)
     #------------cat hinh-------------
     #roi = imgOrigan[y+2:y+height, x+5:x+width]
     #http://answers.opencv.org/question/29260/how-to-save-a-rectangular-roi/
     #cv2.imwrite("./chu_tach/roi"+str(i)+".png", roi)
     #---------------------------------
-    i=i+1
+    
     #show_wait_destroy("ohyeh",img)
     
 cv2.imwrite('bangdiem_contours.png',img)
-
-#print list_dc
 #cat diem chu
 i = 0
+print "..................Tien Hanh Nhan Dien..............."
+
 for diem in ListDiem:
+    
     i=i+1
     if diem.mssvCnt is not None:
         x, y, width, height = cv2.boundingRect(diem.mssvCnt)
-        roi = imgOrigan[y:y+height, x:x+width]
+        roi = imgOrigan[y+8:y+height-8, x+15:x+width-15]
         diem.setMssv(getMSSV(roi))
-        #cv2.imwrite("./catchu/"+str(i)+"a.png", roi)
+        cv2.imwrite("./catchu/"+str(i)+"a.png", roi)
     if diem.diemsoCnt is not None:
         x, y, width, height = cv2.boundingRect(diem.diemsoCnt)
         roi = imgOrigan[y:y+height, x:x+width]
+        #cv2.imshow("ss",roi)
+        #cv2.waitKey(0)
+        #print roi.shape
+        #diemd = getDiemSo(roi)
+       # print diemd
         diem.setDiemSo(getDiemSo(roi))
-        #cv2.imwrite("./catchu/"+str(i)+"b.png", roi)
+        cv2.imwrite("./catchu/"+str(i)+"b.png", roi)
     if diem.diemchuCnt is not None:
         x, y, width, height = cv2.boundingRect(diem.diemchuCnt)
         roi = imgOrigan[y:y+height, x:x+width]
         diemchu = getDiemChu(roi)
         diem.setDiemChu(diemchu)
-        #cv2.imwrite("./catchu/"+str(i)+"c.png", roi)
+        cv2.imwrite("./catchu/"+str(i)+"c.png", roi)
 text_file = open("Output.txt", "w")
-'''
-for diem in ListDiem:
-    text_file.write(diem.getMssv()+"\t"+diem.getDiemSo()+"\t"+diem.getDiemChu()+"\n");
-#    text_file.write(diem.getDiemSo()+"\n");
-#    text_file.write(diem.getDiemChu()+"\n");
-text_file.close()
-'''
 for i in range(len(ListDiem)-1,0,-1):
     diem = ListDiem[i];
-    text_file.write(diem.getMssv()+"\t"+diem.getDiemSo()+"\t"+diem.getDiemChu()+"\n");
-#    text_file.write(diem.getDiemSo()+"\n");
-#    text_file.write(diem.getDiemChu()+"\n");
+    text_file.write(str(diem.getMssv())+"\t"+str(diem.getDiemSo())+"\t"+str(diem.getDiemChu())+"\n");
 text_file.close()
-#np.savetxt('Output.txt', ["Purchase Amount: %s" % TotalAmount], fmt='%s')

@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -269,9 +270,11 @@ namespace DemoNhanDangChuViet
               //  proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;  //this is for hiding the cmd window...so execution will happen in back ground.
                 proc.Start();
                 proc.WaitForExit();
-                bmp = new Bitmap(@"" + Constant.currentPath + "\\bangdiem_reshape.png");
-                pictureBox2.Image = bmp;
-
+                //bmp = new Bitmap(@"" + Constant.currentPath + "\\bangdiem_reshape.png");
+                //pictureBox2.Image = bmp;
+                FileStream fileStream = new FileStream(@"" + Constant.currentPath + "\\bangdiem_reshape.png", FileMode.Open, FileAccess.Read);
+                pictureBox2.Image = Image.FromStream(fileStream);
+                fileStream.Close();
             }
             catch (Exception ex)
             {

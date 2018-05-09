@@ -30,8 +30,8 @@ def recognition(img):
     svm.setC(2.67)
     svm.setGamma(5.383)
 
+#    svm = cv.ml.SVM_load('svm_data.dat')
     svm = cv.ml.SVM_load('./Mssv/svm_data.dat')
-#    svm = cv.ml.SVM_load('./Mssv/svm_data.dat')
     roi = cv.resize(img, (20, 20), interpolation=cv.INTER_AREA)
     fd = hog(roi)
     testData = np.float32(fd).reshape(-1,bin_n*4)

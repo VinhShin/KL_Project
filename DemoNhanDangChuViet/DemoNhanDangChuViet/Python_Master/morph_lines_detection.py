@@ -12,7 +12,7 @@ def show_wait_destroy(winname, img):
     #cv.moveWindow(winname, 500, 0)
     #cv.waitKey(0)
     #cv.destroyWindow(winname)
-    print "........"
+    print "........Tien Hanh Cat Khung........"
 
 def main(argv):
     # [load_image]
@@ -183,7 +183,7 @@ def main(argv):
     show_wait_destroy("last - final", horizontal)
 
     cv.imwrite("bangdiem_morph_line.png",horizontal)
-    
+    print 'Khung hinh duoc luu tai Python_Master/Bangdiem_morph_line'
     return 0
 
    
