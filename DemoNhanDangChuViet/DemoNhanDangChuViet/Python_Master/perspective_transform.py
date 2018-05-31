@@ -6,8 +6,8 @@ import imutils
 import cv2
 import sys
 
-#image = cv2.imread("./bangdiem/bangdiem1.png")
-#imageOrigan = cv2.imread("./bangdiem/bangdiem1.png")
+#image = cv2.imread("./bangdiem/bangdiem19.png")
+#imageOrigan = cv2.imread("./bangdiem/bangdiem19.png")
 print sys.argv
 print "..............................Tiến hành điều chỉnh biên ảnh..........."
 image = cv2.imread(sys.argv[1])

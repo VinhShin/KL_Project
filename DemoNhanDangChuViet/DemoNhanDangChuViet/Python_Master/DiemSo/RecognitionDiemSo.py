@@ -49,10 +49,12 @@ def getDiemSo(im):
     result_CNT = []#result is list include all contour needed
     contours = sorted(contours, key=cv2.contourArea, reverse=True)
     #chi lay 2 contours lon nhat
-    if len(contours)>2:
+
+    print len(contours)
+    if len(contours)>1:
         result_CNT.append(contours[0])
         result_CNT.append(contours[1])
-
+    print len(result_CNT)
     #sap xep trai -> phai
     result_CNT.sort(greater)
     rectangles = [cv2.boundingRect(ctr) for ctr in result_CNT]
@@ -72,6 +74,6 @@ def getDiemSo(im):
     #    return getDiemSo(im)
     #print diemso
     return diemso
-#img = cv2.imread("memay.png");
+img = cv2.imread("6031055.jpg");
 
-#print getDiemSo(img)
+print getDiemSo(img)

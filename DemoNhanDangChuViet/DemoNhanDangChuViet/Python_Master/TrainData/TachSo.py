@@ -27,7 +27,7 @@ def greater(a, b):
 sizeScale = 100;
 def run(index, j):
     print index
-    im = cv2.imread("./catchu/diemso/"+str(index)+"b.png");
+    im = cv2.imread("./catchu/diemso/"+str(index)+".jpg");
     if im is None:
         return j
     imtemp = im.copy()
@@ -71,7 +71,7 @@ def run(index, j):
         # Desenare dreptunghi
         cv2.rectangle(imtemp, (rect[0], rect[1]), (rect[0] + rect[2], rect[1] + rect[3]), (0, 255, 0), 3)
         region_of_interest = image_threshold[rect[1]:rect[1]+rect[3],rect[0]:rect[0]+rect[2]]
-        cv2.imwrite("./catchu/diemso/xuly/"+str(j)+".png",region_of_interest)
+        cv2.imwrite("./catchu/diemso/xuly/"+str(j)+".jpg",region_of_interest)
 
         j = j + 1
         #cv2.imshow("ohyeh",region_of_interest)
@@ -80,5 +80,5 @@ def run(index, j):
 
 #run(169,1000)
 j = 0
-for i in range(1,232):
+for i in range(1,572):
     j = run(i,j)

@@ -84,7 +84,6 @@ namespace DemoNhanDangChuViet
                 lst.Add(new SinhVien( words[0].Trim(), words[1].Trim(), words[2].Trim()));
                 
             }
-
             file.Close();
             for (int i = 0; i < lst.Count; i++)
             {

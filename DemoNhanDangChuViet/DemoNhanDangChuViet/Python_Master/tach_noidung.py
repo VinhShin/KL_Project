@@ -20,8 +20,8 @@ def cutMssv(Origan,img,index):
     mssvIndex = 2;
     dsIndex = 6;
     dcIndex = 7;
-    cv2.imshow("aa",Origan)
-    cv2.waitKey(0)
+    #cv2.imshow("aa",Origan)
+    #cv2.waitKey(0)
     currentIndex = 0;
     start = -1;
     end = -1;
@@ -48,6 +48,7 @@ def cutMssv(Origan,img,index):
                 orig = Origan[0:Origan.shape[0],start:end];
                 #cv2.imshow("aa",orig)
                 #cv2.waitKey(0)
+                cv2.imwrite(str(index)+str(i)+".jpg",orig)
                 tempDiem.setDiemSo(getDiemSo(orig))
             elif(currentIndex == dcIndex):
                 orig = Origan[0:Origan.shape[0],start:end];
@@ -63,8 +64,8 @@ def cutMssv(Origan,img,index):
             
         
 def caculator(img, index, width, heigh):
-    cv2.imshow("aa",img)
-    cv2.waitKey(0)
+    #cv2.imshow("aa",img)
+    #cv2.waitKey(0)
     check = -1;
     start = -1;
     end = -1;
@@ -76,7 +77,7 @@ def caculator(img, index, width, heigh):
             end = i;
             break;
     print start,end
-    if start !=-1 and end !=-1:
+    if start !=-1 and end !=-1 and end-start>20:
         cv2.imwrite(str(i)+".jpg",imgOrigan[start:end,0:width])
         temp = img[start+1:end-1,0:width]
         cv2.imwrite(str(i)+".jpg",temp)
@@ -84,6 +85,8 @@ def caculator(img, index, width, heigh):
         #cv2.imshow("ss",temp)
         #cv2.waitKey(0)
         cutMssv(tempOrigan,temp,i)
+        return start, end
+    elif start !=-1 and end !=-1 and end-start<20:
         return start, end
     else:
         return -1,-1
