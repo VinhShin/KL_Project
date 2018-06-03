@@ -74,6 +74,6 @@ def getDiemSo(im):
     #    return getDiemSo(im)
     #print diemso
     return diemso
-img = cv2.imread("6031055.jpg");
+#img = cv2.imread("6031055.jpg");
 
-print getDiemSo(img)
+#print getDiemSo(img)

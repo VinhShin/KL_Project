@@ -1,0 +1,123 @@
+C:\Users\thanh93\Desktop\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.exe.config
+C:\Users\thanh93\Desktop\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.exe
+C:\Users\thanh93\Desktop\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.pdb
+C:\Users\thanh93\Desktop\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.csprojResolveAssemblyReference.cache
+C:\Users\thanh93\Desktop\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.Form1.resources
+C:\Users\thanh93\Desktop\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.Properties.Resources.resources
+C:\Users\thanh93\Desktop\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.csproj.GenerateResource.Cache
+C:\Users\thanh93\Desktop\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.exe
+C:\Users\thanh93\Desktop\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.pdb
+C:\Users\thanh93\Desktop\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\Emgu.CV.DebuggerVisualizers.VS2012.dll
+C:\Users\thanh93\Desktop\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\Emgu.CV.dll
+C:\Users\thanh93\Desktop\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\Emgu.CV.GPU.dll
+C:\Users\thanh93\Desktop\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\Emgu.CV.ML.dll
+C:\Users\thanh93\Desktop\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\Emgu.CV.OpenCL.dll
+C:\Users\thanh93\Desktop\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\Emgu.CV.UI.dll
+C:\Users\thanh93\Desktop\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\Emgu.CV.VideoStab.dll
+C:\Users\thanh93\Desktop\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\Emgu.Util.dll
+C:\Users\thanh93\Desktop\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\Emgu.CV.World.dll
+C:\Users\thanh93\Desktop\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\ZedGraph.dll
+C:\Users\thanh93\Desktop\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\Emgu.CV.World.xml
+C:\Users\thanh93\Desktop\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\Emgu.CV.DebuggerVisualizers.VS2013.dll
+C:\Users\thanh93\Desktop\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\opencv_core2410.dll
+C:\Users\thanh93\Desktop\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\opencv_imgproc2410.dll
+D:\KhoaLuan\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.exe.config
+D:\KhoaLuan\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.exe
+D:\KhoaLuan\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.pdb
+D:\KhoaLuan\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\opencv_core2410.dll
+D:\KhoaLuan\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\opencv_imgproc2410.dll
+D:\KhoaLuan\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.exe
+D:\KhoaLuan\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.pdb
+D:\KhoaLuan\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\Emgu.CV.World.dll
+D:\KhoaLuan\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\ZedGraph.dll
+D:\KhoaLuan\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\Emgu.CV.World.xml
+D:\KhoaLuan\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.csprojResolveAssemblyReference.cache
+D:\KhoaLuan\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.Form1.resources
+D:\KhoaLuan\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.Properties.Resources.resources
+D:\KhoaLuan\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.csproj.GenerateResource.Cache
+D:\KhoaLuan\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.exe.config
+D:\KhoaLuan\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.exe
+D:\KhoaLuan\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.pdb
+D:\KhoaLuan\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\opencv_core2410.dll
+D:\KhoaLuan\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\opencv_imgproc2410.dll
+D:\KhoaLuan\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.exe
+D:\KhoaLuan\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.pdb
+D:\KhoaLuan\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\Emgu.CV.World.dll
+D:\KhoaLuan\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\ZedGraph.dll
+D:\KhoaLuan\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\Emgu.CV.World.xml
+D:\KhoaLuan\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.csprojResolveAssemblyReference.cache
+D:\KhoaLuan\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.Form1.resources
+D:\KhoaLuan\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.Properties.Resources.resources
+D:\KhoaLuan\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.csproj.GenerateResource.Cache
+D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\opencv_core2410.dll
+D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\opencv_imgproc2410.dll
+D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.exe.config
+D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.exe
+D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.pdb
+D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.Form1.resources
+D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.fShowImage.resources
+D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.Properties.Resources.resources
+D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.csproj.GenerateResource.Cache
+D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.exe
+D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.pdb
+D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.csprojResolveAssemblyReference.cache
+D:\KhoaLuan\New folder (2)\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.exe.config
+D:\KhoaLuan\New folder (2)\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.exe
+D:\KhoaLuan\New folder (2)\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.pdb
+D:\KhoaLuan\New folder (2)\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\opencv_core2410.dll
+D:\KhoaLuan\New folder (2)\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\opencv_imgproc2410.dll
+D:\KhoaLuan\New folder (2)\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.exe
+D:\KhoaLuan\New folder (2)\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.pdb
+D:\KhoaLuan\New folder (2)\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.csprojResolveAssemblyReference.cache
+D:\KhoaLuan\New folder (2)\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.Form1.resources
+D:\KhoaLuan\New folder (2)\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.fShowImage.resources
+D:\KhoaLuan\New folder (2)\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.Properties.Resources.resources
+D:\KhoaLuan\New folder (2)\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.csproj.GenerateResource.Cache
+D:\KhoaLuan\NewFolder\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.exe.config
+D:\KhoaLuan\NewFolder\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.exe
+D:\KhoaLuan\NewFolder\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.pdb
+D:\KhoaLuan\NewFolder\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.csprojResolveAssemblyReference.cache
+D:\KhoaLuan\NewFolder\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.Form1.resources
+D:\KhoaLuan\NewFolder\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.fShowImage.resources
+D:\KhoaLuan\NewFolder\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.Properties.Resources.resources
+D:\KhoaLuan\NewFolder\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.csproj.GenerateResource.Cache
+D:\KhoaLuan\NewFolder\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\opencv_core2410.dll
+D:\KhoaLuan\NewFolder\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\opencv_imgproc2410.dll
+D:\KhoaLuan\NewFolder\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.exe
+D:\KhoaLuan\NewFolder\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.pdb
+D:\KhoaLuan\Main Project\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.exe.config
+D:\KhoaLuan\Main Project\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.exe
+D:\KhoaLuan\Main Project\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.pdb
+D:\KhoaLuan\Main Project\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\opencv_core2410.dll
+D:\KhoaLuan\Main Project\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\opencv_imgproc2410.dll
+D:\KhoaLuan\Main Project\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.exe
+D:\KhoaLuan\Main Project\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.pdb
+D:\KhoaLuan\Main Project\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.csprojResolveAssemblyReference.cache
+D:\KhoaLuan\Main Project\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.Form1.resources
+D:\KhoaLuan\Main Project\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.fShowImage.resources
+D:\KhoaLuan\Main Project\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.Properties.Resources.resources
+D:\KhoaLuan\Main Project\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.csproj.GenerateResource.Cache
+D:\KhoaLuan\MainProject\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.exe.config
+D:\KhoaLuan\MainProject\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.exe
+D:\KhoaLuan\MainProject\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.pdb
+D:\KhoaLuan\MainProject\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\opencv_core2410.dll
+D:\KhoaLuan\MainProject\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\opencv_imgproc2410.dll
+D:\KhoaLuan\MainProject\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.exe
+D:\KhoaLuan\MainProject\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.pdb
+D:\KhoaLuan\MainProject\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.csprojResolveAssemblyReference.cache
+D:\KhoaLuan\MainProject\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.Form1.resources
+D:\KhoaLuan\MainProject\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.fShowImage.resources
+D:\KhoaLuan\MainProject\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.Properties.Resources.resources
+D:\KhoaLuan\MainProject\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.csproj.GenerateResource.Cache
+D:\KhoaLuan\MainProject\KL_Project\DemoNhanDangChuViet_V2\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.exe.config
+D:\KhoaLuan\MainProject\KL_Project\DemoNhanDangChuViet_V2\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.exe
+D:\KhoaLuan\MainProject\KL_Project\DemoNhanDangChuViet_V2\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.pdb
+D:\KhoaLuan\MainProject\KL_Project\DemoNhanDangChuViet_V2\DemoNhanDangChuViet\bin\Debug\opencv_core2410.dll
+D:\KhoaLuan\MainProject\KL_Project\DemoNhanDangChuViet_V2\DemoNhanDangChuViet\bin\Debug\opencv_imgproc2410.dll
+D:\KhoaLuan\MainProject\KL_Project\DemoNhanDangChuViet_V2\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.exe
+D:\KhoaLuan\MainProject\KL_Project\DemoNhanDangChuViet_V2\DemoNhanDangChuViet\bin\Debug\DemoNhanDangChuViet.pdb
+D:\KhoaLuan\MainProject\KL_Project\DemoNhanDangChuViet_V2\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.csprojResolveAssemblyReference.cache
+D:\KhoaLuan\MainProject\KL_Project\DemoNhanDangChuViet_V2\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.Form1.resources
+D:\KhoaLuan\MainProject\KL_Project\DemoNhanDangChuViet_V2\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.fShowImage.resources
+D:\KhoaLuan\MainProject\KL_Project\DemoNhanDangChuViet_V2\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.Properties.Resources.resources
+D:\KhoaLuan\MainProject\KL_Project\DemoNhanDangChuViet_V2\DemoNhanDangChuViet\obj\Debug\DemoNhanDangChuViet.csproj.GenerateResource.Cache

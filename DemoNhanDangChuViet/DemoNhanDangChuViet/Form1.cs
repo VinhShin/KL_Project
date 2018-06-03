@@ -206,7 +206,7 @@ namespace DemoNhanDangChuViet
                 proc.Start();
                 proc.WaitForExit();
                 //bmp = new Bitmap(@"" + Constant.currentPath + "\\bangdiem_contours.png");
-                bmp = new Bitmap(@"" + Constant.currentPath + "\\bangdiem_morph_line.png");
+                bmp = new Bitmap(@"" + Constant.currentPath + "\\bangdiem_contours.png");
                 pictureBox2.Image = bmp;
                 //                path = @"..\..\DemoNhanDangChuViet\Python_Master\bangdiem_reshape.png";
                 ////                path = @"D:\nhandienchuviet\KL_Project\DemoNhanDangChuViet\DemoNhanDangChuViet\Python_Master\bangdiem_reshape.png";

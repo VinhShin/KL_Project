@@ -43,6 +43,8 @@ def cutMssv(Origan,img,index):
             #cv2.waitKey(0)
             if(currentIndex == mssvIndex):
                 orig = Origan[0+8:Origan.shape[0]-8,start+15:end-15];
+                #cv2.imshow("ss",orig)
+                #cv2.waitKey(0)
                 tempDiem.setMssv(getMSSV(orig))
             elif(currentIndex == dsIndex):
                 orig = Origan[0:Origan.shape[0],start:end];
@@ -78,9 +80,9 @@ def caculator(img, index, width, heigh):
             break;
     print start,end
     if start !=-1 and end !=-1 and end-start>20:
-        cv2.imwrite(str(i)+".jpg",imgOrigan[start:end,0:width])
+        #cv2.imwrite(str(i)+".jpg",imgOrigan[start:end,0:width])
         temp = img[start+1:end-1,0:width]
-        cv2.imwrite(str(i)+".jpg",temp)
+        #cv2.imwrite(str(i)+".jpg",temp)
         tempOrigan = imgOrigan[start+1:end,0:width]
         #cv2.imshow("ss",temp)
         #cv2.waitKey(0)
@@ -110,6 +112,8 @@ index = 0;
 while(index<height):
 	
     print index
+    #cv2.imshow("sss",thresh)
+    #cv2.waitKey(0)
     temp, index = caculator(thresh,index,width,height)
     
     if index == -1:

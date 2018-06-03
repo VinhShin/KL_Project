@@ -8,6 +8,12 @@ import sys
 
 #image = cv2.imread("./bangdiem/bangdiem19.png")
 #imageOrigan = cv2.imread("./bangdiem/bangdiem19.png")
+
+
+#image = cv2.imread("imgAfterProcessing.jpg")
+#imageOrigan = cv2.imread("imgAfterProcessing.jpg")
+
+
 print sys.argv
 print "..............................Tiến hành điều chỉnh biên ảnh..........."
 image = cv2.imread(sys.argv[1])
@@ -41,13 +47,19 @@ if len(cnts) > 0:
   if len(approx) == 4:
       docCnt = approx
       image = cv2.drawContours(image, [docCnt], 0, (0,255,0), 3)
-      #break
-#paper = four_point_transform(image, docCnt.reshape(4, 2))
+      break
+paper = four_point_transform(image, docCnt.reshape(4, 2))
 warped = four_point_transform(imageOrigan, docCnt.reshape(4, 2))
+
 '''
-cv2.imshow("test",image)
+image1 = cv2.drawContours(image, [docCnt], 0, (0,255,0), 3)
+cv2.imshow("test",image1)
 cv2.waitKey(0)
+cv2.imshow("test",warped)
+cv2.waitKey(0)
+
 cv2.imshow("test",gray)
 cv2.waitKey(0)
 '''
+#cv2.imwrite("sssss.png",image);
 cv2.imwrite("bangdiem_reshape.png",warped);

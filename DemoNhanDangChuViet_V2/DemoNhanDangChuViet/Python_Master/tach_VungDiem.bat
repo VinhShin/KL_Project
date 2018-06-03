@@ -1,0 +1,1 @@
+python TachVungDiem.py %1

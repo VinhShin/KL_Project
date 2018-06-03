@@ -19,13 +19,14 @@ def greater(a, b):
     else:
         return -1
 def splict(img):
-    #cv2.imshow("ohyeh",img)
-    #cv2.waitKey(0)
+    cv2.imshow("ohyeh",img)
+    cv2.waitKey(0)
     mssv = ""
     height = img.shape[0]
     width = img.shape[1]
     start = -1;
     end = -1;
+
     for i in range(0, width):
         check = 1
         for j in range(0, height):
@@ -40,13 +41,16 @@ def splict(img):
         if check == 1 or i == width-1:
             #print "aa"
             end = i;
-            if end-start<10:
+            if end-start<5:
                 end = -1
             check = -1
         if end != -1 and start != -1:
             #print start
             #print end
             temp = img[0:height,start:end]
+            #cv2.imshow("ohyeh",temp)
+            #cv2.waitKey(0)
+
             if temp.shape[1] > 35:#truong hop bi noi => cat ra
                 mssv_temp = recognition(temp[0:height,0:temp.shape[1]/2])
                 mssv += str(int(mssv_temp))
@@ -55,10 +59,9 @@ def splict(img):
             else:
                 #print temp.shape
                 mssv_temp = recognition(temp)
-                #print mssv_temp
+                print mssv_temp
                 mssv += str(int(mssv_temp))
-                #cv2.imshow("ohyeh",temp)
-                #cv2.waitKey(0)
+
             start = -1;
             end = -1;
     return mssv;
